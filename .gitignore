@@ -1,6 +1,7 @@
 # IDE specific
 .idea/
 .vscode/
+.obsidian
 
 # Jupyter
 .ipynb_checkpoints/
