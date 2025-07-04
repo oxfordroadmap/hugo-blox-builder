@@ -69,7 +69,7 @@ module.exports = {
           700: "rgb(var(--color-neutral-700) / <alpha-value>)",
           800: "rgb(var(--color-neutral-800) / <alpha-value>)",
           900: "rgb(var(--color-neutral-900) / <alpha-value>)",
-        },
+          },
         primary: {
           50: "rgb(var(--color-primary-50) / <alpha-value>)",
           100: "rgb(var(--color-primary-100) / <alpha-value>)",
@@ -81,6 +81,7 @@ module.exports = {
           700: "rgb(var(--color-primary-700) / <alpha-value>)",
           800: "rgb(var(--color-primary-800) / <alpha-value>)",
           900: "rgb(var(--color-primary-900) / <alpha-value>)",
+          950: "rgb(var(--color-primary-950) / <alpha-value>)",
         },
         secondary: {
           50: "rgb(var(--color-secondary-50) / <alpha-value>)",
@@ -93,6 +94,7 @@ module.exports = {
           700: "rgb(var(--color-secondary-700) / <alpha-value>)",
           800: "rgb(var(--color-secondary-800) / <alpha-value>)",
           900: "rgb(var(--color-secondary-900) / <alpha-value>)",
+          950: "rgb(var(--color-secondary-950) / <alpha-value>)",
         },
       },
       fontFamily: {
