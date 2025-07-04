@@ -31,6 +31,9 @@ module.exports = {
       variants: ['md'],
     },
     {
+      pattern: /^line-clamp-(\d+)$/,
+    },    
+    {
       pattern: /bg-white+/,
     },
     {
