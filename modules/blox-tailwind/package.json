@@ -24,7 +24,7 @@
   "homepage": "https://hugoblox.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HugoBlox/hugo-blox-builder.git"
+    "url": "https://github.com/oxfordroadmap/hugo-blox-builder.git"
   },
   "scripts": {
     "build:styles": "npx tailwindcss -i ./assets/css/styles.css -o ./assets/dist/wc.min.css --minify",
