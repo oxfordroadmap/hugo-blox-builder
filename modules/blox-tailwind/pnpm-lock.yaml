@@ -61,8 +61,8 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
-  '@babel/runtime@7.23.2':
-    resolution: {integrity: sha512-mM8eg4yl5D6i3lu2QKPuPH4FArvJ8KhTofbE7jwMUv9KX5mBvwPAqnV3MlyBNqdp9RyRKP6Yck8TrfYrPvX3bg==}
+  '@babel/runtime@7.27.6':
+    resolution: {integrity: sha512-vbavdySgbTTrmFE+EsiqUTzlOr5bzlnJtUv9PynGCAKvfQqjIXbvFdumPM/GxMDfyuGMJaJAU6TO4zc1Jf1i8Q==}
     engines: {node: '>=6.9.0'}
 
   '@braintree/sanitize-url@6.0.4':
@@ -449,8 +449,8 @@ packages:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
 
-  caniuse-lite@1.0.30001554:
-    resolution: {integrity: sha512-A2E3U//MBwbJVzebddm1YfNp7Nud5Ip+IPn4BozBmn4KqVX7AvluoIDFWjsv5OkGnKUXQVmMSoMKLa3ScCblcQ==}
+  caniuse-lite@1.0.30001726:
+    resolution: {integrity: sha512-VQAUIUzBiZ/UnlM28fSp2CRF3ivUn1BWEvxMcVTNwpw91Py1pGbPIyIKtd+tzct9C3ouceCVdGAXxZOpZAsgdw==}
 
   canvas-fit@1.5.0:
     resolution: {integrity: sha512-onIcjRpz69/Hx5bB5HGbYKUF2uC6QT6Gp+pfpGm3A7mPfcluSLV5v4Zu+oflDUwLdUw0rLIBhUbi0v8hM4FJQQ==}
@@ -1436,8 +1436,8 @@ packages:
   normalize-svg-path@1.1.0:
     resolution: {integrity: sha512-r9KHKG2UUeB5LoTouwDzBy2VxXlHsiM6fyLQvnJa0S5hrhzqElH/CH7TUGhT1fVvIYBIKf3OpY4YJ4CK+iaqHg==}
 
-  npm2url@0.2.1:
-    resolution: {integrity: sha512-Ls7mMyud1Kk0EisqsTt2TPtM7gLRvgmvDxOg3FPI5zjfhQ+ZFNBXX2K9VT7vo+HqUsz/uCiIxkcO0SvIuneVug==}
+  npm2url@0.2.4:
+    resolution: {integrity: sha512-arzGp/hQz0Ey+ZGhF64XVH7Xqwd+1Q/po5uGiBbzph8ebX6T0uvt3N7c1nBHQNsQVykQgHhqoRTX7JFcHecGuw==}
 
   number-is-integer@1.0.1:
     resolution: {integrity: sha512-Dq3iuiFBkrbmuQjGFFF3zckXNCQoSD37/SdSbgcBailUx6knDvDwb5CympBgcoWHy36sfS12u74MHYkXyHq6bg==}
@@ -1660,9 +1660,6 @@ packages:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
 
-  regenerator-runtime@0.14.0:
-    resolution: {integrity: sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==}
-
   regl-error2d@2.0.12:
     resolution: {integrity: sha512-r7BUprZoPO9AbyqM5qlJesrSRkl+hZnVKWKsVp7YhOl/3RIpi4UDGASGJY0puQ96u5fBYw/OlqV24IGcgJ0McA==}
 
@@ -1675,8 +1672,8 @@ packages:
   regl-splom@1.0.14:
     resolution: {integrity: sha512-OiLqjmPRYbd7kDlHC6/zDf6L8lxgDC65BhC8JirhP4ykrK4x22ZyS+BnY8EUinXKDeMgmpRwCvUmk7BK4Nweuw==}
 
-  regl@2.1.0:
-    resolution: {integrity: sha512-oWUce/aVoEvW5l2V0LK7O5KJMzUSKeiOwFuJehzpSFd43dO5spP9r+sSUfhKtsky4u6MCqWJaRL+abzExynfTg==}
+  regl@2.1.1:
+    resolution: {integrity: sha512-+IOGrxl3FZ8ZM9ixCWQZzFRiRn7Rzn9bu3iFHwg/yz4tlOUQgbO4PHLgG+1ZT60zcIV8tief6Qrmyl8qcoJP0g==}
 
   require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
@@ -2031,9 +2028,7 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@babel/runtime@7.23.2':
-    dependencies:
-      regenerator-runtime: 0.14.0
+  '@babel/runtime@7.27.6': {}
 
   '@braintree/sanitize-url@6.0.4': {}
 
@@ -2109,7 +2104,7 @@ snapshots:
 
   '@gera2ld/jsx-dom@2.2.2':
     dependencies:
-      '@babel/runtime': 7.23.2
+      '@babel/runtime': 7.27.6
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -2311,7 +2306,7 @@ snapshots:
   autoprefixer@10.4.16(postcss@8.4.31):
     dependencies:
       browserslist: 4.22.1
-      caniuse-lite: 1.0.30001554
+      caniuse-lite: 1.0.30001726
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -2347,7 +2342,7 @@ snapshots:
 
   browserslist@4.22.1:
     dependencies:
-      caniuse-lite: 1.0.30001554
+      caniuse-lite: 1.0.30001726
       electron-to-chromium: 1.4.567
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
@@ -2356,7 +2351,7 @@ snapshots:
 
   camelcase-css@2.0.1: {}
 
-  caniuse-lite@1.0.30001554: {}
+  caniuse-lite@1.0.30001726: {}
 
   canvas-fit@1.5.0:
     dependencies:
@@ -2984,7 +2979,7 @@ snapshots:
       parse-rect: 1.2.0
       parse-unit: 1.0.1
       pick-by-alias: 1.2.0
-      regl: 2.1.0
+      regl: 2.1.1
       to-px: 1.0.1
       typedarray-pool: 1.2.0
 
@@ -3274,9 +3269,9 @@ snapshots:
 
   markmap-common@0.15.3:
     dependencies:
-      '@babel/runtime': 7.23.2
+      '@babel/runtime': 7.27.6
       '@gera2ld/jsx-dom': 2.2.2
-      npm2url: 0.2.1
+      npm2url: 0.2.4
 
   math-log2@1.0.1: {}
 
@@ -3543,7 +3538,7 @@ snapshots:
     dependencies:
       svg-arc-to-cubic-bezier: 3.2.0
 
-  npm2url@0.2.1: {}
+  npm2url@0.2.4: {}
 
   number-is-integer@1.0.1:
     dependencies:
@@ -3817,8 +3812,6 @@ snapshots:
     dependencies:
       picomatch: 2.3.1
 
-  regenerator-runtime@0.14.0: {}
-
   regl-error2d@2.0.12:
     dependencies:
       array-bounds: 1.0.1
@@ -3873,7 +3866,7 @@ snapshots:
       raf: 3.4.1
       regl-scatter2d: 3.2.9
 
-  regl@2.1.0: {}
+  regl@2.1.1: {}
 
   require-directory@2.1.1: {}
 

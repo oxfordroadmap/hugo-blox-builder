@@ -4,8 +4,8 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const content_extra = process.env.HB_TW_CONTENT ? process.env.HB_TW_CONTENT.split(', ') : '';
 
 console.log('Current directory: ' + process.cwd());
-console.log(`content_extra: ${content_extra}`);
-// console.log('../../starters/'+process.env.HB_TPL+'/hugo_stats.json')
+console.log('content_extra: ${content_extra}');
+console.log('../../starters/'+process.env.HB_TPL+'/hugo_stats.json')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -98,7 +98,21 @@ module.exports = {
         },
       },
       fontFamily: {
-        'sans': ['"Inter var"', ...defaultTheme.fontFamily.sans],
+        // inner double quotes for font names that contain spaces to ensure they’re handled as single units by both Tailwind and the browser.
+        sans: [
+          '"Source Han Sans"',
+          '"Microsoft YaHei"',
+          '"PingFang SC"',
+          '"PingFang TC"',
+          ...defaultTheme.fontFamily.sans,
+        ],
+        serif: [
+          '"Source Han Serif"',
+          '"Microsoft YaHei"',
+          '"PingFang SC"',
+          '"PingFang TC"',
+          ...defaultTheme.fontFamily.serif,
+        ],
       },
       fontSize: {
         xs: '.75rem',
@@ -162,6 +176,9 @@ module.exports = {
               backgroundColor: theme("colors.primary.600 / 1"),
               padding: "0.1rem 0.2rem",
               borderRadius: "0.25rem",
+            },
+            p: {
+              marginTop: "0",
             },
           },
         },
