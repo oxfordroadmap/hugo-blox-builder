@@ -94,5 +94,87 @@ These help confirm that dependencies match expectations—no excess layers or pe
   ```
 
 ---
+# **commit hash** and **commit timestamp** 
 
-Would you like help scripting this for Hugo modules or packaging it into a reusable starter template? You’ve got a sophisticated setup—let’s make it frictionless across environments.
+using standard Windows Command Prompt
+
+### 🧩 1. **Get the full commit hash**
+
+Open **Command Prompt** in your repository folder and run:
+
+cmd
+
+```
+git log -1 --pretty=format:"%H"
+```
+
+This will return something like:
+
+```
+c0c24e7f7ce69ca223a56ffbaaf59e77a780d55a
+```
+
+✅ You **must use the full hash** (all 40 characters) in your pseudo-version tag—short hashes (like the first 7 chars) work for browsing, but not for `go.mod`.
+
+### 🕒 2. **Get the UTC timestamp in Go format**
+
+Still in Command Prompt, run this two-step process:
+
+#### Step 1: Get the Unix timestamp
+
+cmd
+
+```
+git log -1 --pretty=format:"%ct"
+```
+
+Example output:
+
+```
+1751625724
+```
+
+#### Step 2: Convert to UTC timestamp (`YYYYMMDDHHMMSS`)
+
+You’ll need to use an external method because Windows Command Prompt doesn’t support direct timestamp formatting. Here are two options:
+
+#### 👉 Option A: Use https://www.unixtimestamp.com
+
+Paste `1751625724` into the field and get the UTC date formatted as:
+
+```
+20250704104204
+```
+
+#### 👉 Option B: Use PowerShell just for conversion (optional fallback):
+
+powershell
+
+```
+(Get-Date "1970-01-01 00:00:00Z").AddSeconds(1751625724).ToUniversalTime().ToString("yyyyMMddHHmmss")
+```
+
+### 🏷️ Your final pseudo-version tag would look like:
+
+```
+v0.0.1-20250704104204-c0c24e7f7ce69ca223a56ffbaaf59e77a780d55a
+```
+
+Now place this inside your `go.mod` like:
+
+go
+
+```
+replace github.com/HugoBlox/hugo-blox-builder => github.com/oxfordroadmap/hugo-blox-builder v0.0.1-20250704104204-c0c24e7f7ce69ca223a56ffbaaf59e77a780d55a
+```
+
+And you're good to run:
+
+cmd
+
+```
+hugo mod tidy
+```
+
+
+
