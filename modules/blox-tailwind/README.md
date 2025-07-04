@@ -111,7 +111,7 @@ git log -1 --pretty=format:"%H"
 This will return something like:
 
 ```
-c0c24e7f7ce69ca223a56ffbaaf59e77a780d55a
+8b683644319a931af94fb5d8b65f637ced7fd4c4
 ```
 
 ✅ You **must use the full hash** (all 40 characters) in your pseudo-version tag—short hashes (like the first 7 chars) work for browsing, but not for `go.mod`.
@@ -131,7 +131,7 @@ git log -1 --pretty=format:"%ct"
 Example output:
 
 ```
-1751625724
+1751631956
 ```
 
 #### Step 2: Convert to UTC timestamp (`YYYYMMDDHHMMSS`)
@@ -143,7 +143,7 @@ You’ll need to use an external method because Windows Command Prompt doesn’t
 Paste `1751625724` into the field and get the UTC date formatted as:
 
 ```
-20250704104204
+20250704122556
 ```
 
 #### 👉 Option B: Use PowerShell just for conversion (optional fallback):
@@ -151,13 +151,13 @@ Paste `1751625724` into the field and get the UTC date formatted as:
 powershell
 
 ```
-(Get-Date "1970-01-01 00:00:00Z").AddSeconds(1751625724).ToUniversalTime().ToString("yyyyMMddHHmmss")
+(Get-Date "1970-01-01 00:00:00Z").AddSeconds(1751631956).ToUniversalTime().ToString("yyyyMMddHHmmss")
 ```
 
 ### 🏷️ Your final pseudo-version tag would look like:
 
 ```
-v0.0.1-20250704104204-c0c24e7f7ce69ca223a56ffbaaf59e77a780d55a
+v0.0.1-20250704122556-8b683644319a931af94fb5d8b65f637ced7fd4c4
 ```
 
 Now place this inside your `go.mod` like:
