@@ -48,6 +48,12 @@ module.exports = {
     {
       pattern: /to-primary+/,
     },
+    {
+      pattern: /bg-amber+/,
+    },
+    {
+      pattern: /text-amber+/,
+    },
   ],
     /* /^bg-white/, /^bg-gray-/, /^bg-primary-/, /^bg-gradient-/, /^from-primary-/, /^to-primary-/,
   /^md:grid-cols-+/], */
