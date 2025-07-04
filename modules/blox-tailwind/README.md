@@ -157,7 +157,7 @@ powershell
 ### 🏷️ Your final pseudo-version tag would look like:
 
 ```
-v0.0.1-20250704122556-8b683644319a931af94fb5d8b65f637ced7fd4c4
+v0.0.2-20250704122556-8b683644319a931af94fb5d8b65f637ced7fd4c4
 ```
 
 Now place this inside your `go.mod` like:
@@ -165,7 +165,7 @@ Now place this inside your `go.mod` like:
 go
 
 ```
-replace github.com/HugoBlox/hugo-blox-builder => github.com/oxfordroadmap/hugo-blox-builder v0.0.1-20250704104204-c0c24e7f7ce69ca223a56ffbaaf59e77a780d55a
+replace github.com/HugoBlox/hugo-blox-builder => github.com/oxfordroadmap/hugo-blox-builder v0.0.2-20250704122556-8b683644319a931af94fb5d8b65f637ced7fd4c4
 ```
 
 And you're good to run:
