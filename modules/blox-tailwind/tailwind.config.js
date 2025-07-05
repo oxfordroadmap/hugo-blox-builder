@@ -41,8 +41,11 @@ module.exports = {
       variants: ['md'],
     },
     {
-      pattern: /^line-clamp-(\d+)$/,
+      pattern: /^line-clamp-(1|2|3|4|5|6)$/,
     },    
+    { 
+      pattern: /^leading-(none|tight|snug|normal|relaxed|loose)$/ 
+    },
     {
       pattern: /bg-white+/,
     },
