@@ -1,6 +1,6 @@
 import 'dotenv/config'
 const defaultTheme = require('tailwindcss/defaultTheme')
-
+const typographyPlugin = require('@tailwindcss/typography');
 const content_extra = process.env.HB_TW_CONTENT ? process.env.HB_TW_CONTENT.split(', ') : '';
 
 console.log('Current directory: ' + process.cwd());
@@ -19,15 +19,25 @@ module.exports = {
     // ...(process.env.HB_TPL ? '../../starters/'+process.env.HB_TPL+'/hugo_stats.json' : './hugo_stats.json'),
   ],
   plugins: [
-    require('@tailwindcss/typography'),
+    typographyPlugin({ target: 'legacy' }),
   ],
   safelist: [
     'task-list',   /* As it's added via JS */
     'pl-4', 'pl-8', 'pl-12',   /* TOC indents */
     'min-h-screen', /* Blox options */
     {
-      /* For dynamic article-grid.start */
+      pattern: /^list-(none|disc|decimal|square|roman)$/,
+    },
+    {
       pattern: /grid-cols-+/,
+      variants: ['md'],
+    },
+    {
+      pattern: /w-1\/(2|3|4|5)/,
+      variants: ['sm', 'md', 'lg', 'hover'],
+    },
+    {
+      pattern: /col-span-+/,
       variants: ['md'],
     },
     {
@@ -64,6 +74,11 @@ module.exports = {
   darkMode: ['class'],
   theme: {
     extend: {
+      listStyleType: {
+        square: 'square',
+        roman: 'upper-roman',
+        // You can override existing types too
+      },
       colors: {
         'hb-dark': 'rgb(23, 24, 28)',
         neutral: {
@@ -106,23 +121,23 @@ module.exports = {
           950: "rgb(var(--color-secondary-950) / <alpha-value>)",
         },
       },
-      fontFamily: {
-        // inner double quotes for font names that contain spaces to ensure they’re handled as single units by both Tailwind and the browser.
-        sans: [
-          '"Source Han Sans"',
-          '"Microsoft YaHei"',
-          '"PingFang SC"',
-          '"PingFang TC"',
-          ...defaultTheme.fontFamily.sans,
-        ],
-        serif: [
-          '"Source Han Serif"',
-          '"Microsoft YaHei"',
-          '"PingFang SC"',
-          '"PingFang TC"',
-          ...defaultTheme.fontFamily.serif,
-        ],
-      },
+        fontFamily: {
+          // inner double quotes for font names that contain spaces to ensure they’re handled as single units by both Tailwind and the browser.
+          sans: [
+            '"Source Han Sans"',
+            '"Microsoft YaHei"',
+            '"PingFang SC"',
+            '"PingFang TC"',
+            ...defaultTheme.fontFamily.sans,
+          ],
+          serif: [
+            '"Source Han Serif"',
+            '"Microsoft YaHei"',
+            '"PingFang SC"',
+            '"PingFang TC"',
+            ...defaultTheme.fontFamily.serif,
+          ],
+        },
       fontSize: {
         xs: '.75rem',
         sm: '.875rem',
