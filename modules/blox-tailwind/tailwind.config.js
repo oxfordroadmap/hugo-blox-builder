@@ -69,10 +69,13 @@ module.exports = {
       pattern: /to-primary+/,
     },
     {
-      pattern: /bg-amber+/,
+      pattern: /(hover:)?border-amber-\d{3}/,
     },
     {
-      pattern: /text-amber+/,
+      pattern: /(hover:)?bg-amber-\d{3}/,
+    },
+    {
+      pattern: /(hover:)?text-amber-\d{3}/,
     },
     {
       pattern: /space-y-(1|3|5|7|9)/,
