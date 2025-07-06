@@ -18,6 +18,81 @@ build:
   writeStats: true
 ```
 
+## Running for  wc.min.css
+
+🎯 That setup means you're now successfully compiling Tailwind from:
+
+- **Input**: `./assets/css/styles.css`
+    
+- **Output**: `./assets/dist/wc.min.css`
+    
+- **Config**: using your `tailwind.config.js`
+    
+- **Minified**: for production efficiency
+    
+
+### 📎 Suggestion for Docs or README
+
+If you want to make future builds consistent for collaborators (or future-you), you can document this like so:
+
+bash
+
+```
+# Build Tailwind styles into minified wc.min.css
+npx tailwindcss -c tailwind.config.js \
+  -i ./assets/css/styles.css \
+  -o ./assets/dist/wc.min.css --minify
+```
+
+Or place in `package.json` under `"scripts"`:
+
+json
+
+```
+"scripts": {
+  "build:tailwind": "npx tailwindcss -c tailwind.config.js -i ./assets/css/styles.css -o ./assets/dist/wc.min.css --minify"
+}
+```
+
+Then run:
+
+bash
+
+```
+npm run build:tailwind
+```
+
+## ✅ Updated Tailwind CLI Command
+
+bash
+
+```
+npx tailwindcss -c tailwind.config.js -i ./assets/css/styles.css -o ./assets/dist/wc.min.css --minify
+```
+
+### 🔍 Breakdown:
+
+|Option|Meaning|
+|---|---|
+|`-i`|Input: `assets/css/main.css` (your base file with `@tailwind` directives)|
+|`-o`|Output: `assets/dist/wc.min.css` (your expected output file)|
+|`--minify`|Optional but recommended for production builds|
+
+### 📦 Optional comment for your build script or documentation:
+
+bash
+
+```
+# Tailwind build command to compile main.css → wc.min.css
+# Output will be minified and saved to assets/dist for use with Hugo
+```
+
+If you’re using Hugo Pipes or another PostCSS/Vite layer, let me know — I can help adapt this to integrate cleanly with your toolchain. Want to bundle this into a build step in your CI workflow or NPM script next? You’re closing the loop beautifully.
+
+
+---
+
+
 
 ## Upgrading 
 * from : tailwindcss@3.3.5

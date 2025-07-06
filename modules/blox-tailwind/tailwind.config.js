@@ -22,6 +22,10 @@ module.exports = {
     typographyPlugin({ target: 'legacy' }),
   ],
   safelist: [
+    // 👇 Safelist to preserve runtime-controlled display classes.
+    // These are toggled via Alpine.js in components like `toggle-toc.html`
+    // Ensure visibility switching with Tailwind's `hidden` / `block` utilities.
+    'hidden', 'block', 
     'task-list',   /* As it's added via JS */
     'pl-4', 'pl-8', 'pl-12',   /* TOC indents */
     'min-h-screen', /* Blox options */
