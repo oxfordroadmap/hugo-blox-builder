@@ -69,6 +69,9 @@ module.exports = {
       pattern: /to-primary+/,
     },
     {
+      pattern: /(hover:)?border-primary-\d{3}/,
+    },
+    {
       pattern: /(hover:)?border-amber-\d{3}/,
     },
     {
